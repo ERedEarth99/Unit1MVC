@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/uploads/Site.css" /> 
+</head>
+<body>
+    <header>
+        <h1>Hi Welcome to my Unit 1 Project</h1>
+            <nav>
+                <ul>
+                <li>@Html.ActionLink("Art View", "ArtView.cshtml")</li>
+                <li>@Html.ActionLink("Photo View", "PhotoView.cshtml")</li>
+                </ul>
+            </nav>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+<footer>
+    <p>&copy; @DateTime.Now.Year - My Unite 1 MVC</p>
+</footer>
+</body>
+</html>

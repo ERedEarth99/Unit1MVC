@@ -1,0 +1,27 @@
+﻿@page
+@model IEnumerable<Unit1MVC.Models.Display>
+@{
+    ViewBag.Title = "Artwork";
+}
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ArtView</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ArtView in Model)
+        {
+            <tr>
+                <td>@ArtView.Title</td>
+                <td>
+                    <img src="@Url.Content("~/AG/A1.png/" + ArtView.ImageFileName)" alt="ArtView.Title" style="width:auto; height:auto;" />
+                    <img src="@Url.Content("~/AG/A2.png/" + ArtView.ImageFileName)" alt="ArtView.Title" style="width:auto; height:auto;" />
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

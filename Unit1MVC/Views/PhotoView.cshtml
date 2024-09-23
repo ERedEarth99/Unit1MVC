@@ -1,0 +1,27 @@
+﻿@page
+@model IEnumerable<Unit1MVC.Models.Display>
+@{
+	ViewBag.Title = "Photography";
+}
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>PhotoView </th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var PhotoView in Model)
+        {
+            <tr>
+                <td>@PhotoView.Title</td>
+                <td>
+                    <img src="@Url.Content("~/PG/P1.png/" + PhotoView.ImageFileName)" alt="PhotoView.Title" style="width:auto; height:auto;" />
+                    <img src="@Url.Content("~/PG/P2.png/" + PhotoView.ImageFileName)" alt="PhotoView.Title" style="width:auto; height:auto;" />
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
